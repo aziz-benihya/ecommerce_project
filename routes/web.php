@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use Flasher\Laravel\Facade\Flasher;
 
 Route::get('/', [HomeController ::class,'home']); 
 
@@ -30,4 +31,21 @@ route::get('view_category',[
 
 route::post('add_category',[
     AdminController::class,'add_category'
+]) ->middleware(['auth','admin']);
+
+
+Route::get('/test', function () {
+    Flasher::addSuccess('Test message from Toastr!');
+    return redirect('/');
+});
+
+route::get('delete_category/{id}',[
+    AdminController::class,'delete_category'
+]) ->middleware(['auth','admin']);
+
+route::get('edit_category/{id}',[
+    AdminController::class,'edit_category'
+]) ->middleware(['auth','admin']);
+route::post('update_category/{id}',[
+    AdminController::class,'update_category'
 ]) ->middleware(['auth','admin']);
