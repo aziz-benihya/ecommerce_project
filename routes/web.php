@@ -72,3 +72,4 @@ route::get('search_product',[
 ]) ->middleware(['auth','admin']);
 
 route::get('product_details/{id}',[HomeController::class,'product_details']);
+route::get('add_cart/{id}',[HomeController::class,'add_cart'])->middleware(['auth', 'verified']);
