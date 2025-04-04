@@ -10,6 +10,7 @@
     <!-- header section strats -->
     @include('home.header')
     <!-- end header section -->
+    
     <!-- slider section -->
     @include('home.slider')
    
@@ -19,7 +20,8 @@
 
   <!-- shop section -->
 
-  @include('home.shop')
+  @include('home.product')
+
 
   <!-- end shop section -->
 

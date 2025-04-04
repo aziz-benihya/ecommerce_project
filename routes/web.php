@@ -7,11 +7,10 @@ use App\Http\Controllers\AdminController;
 use Flasher\Laravel\Facade\Flasher;
 
 Route::get('/', [HomeController ::class,'home']); 
+Route::get('/dashboard', [HomeController ::class,'login_home']) 
+->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -49,3 +48,26 @@ route::get('edit_category/{id}',[
 route::post('update_category/{id}',[
     AdminController::class,'update_category'
 ]) ->middleware(['auth','admin']);
+route::get('add_product',[
+    AdminController::class,'add_product'
+]) ->middleware(['auth','admin']);
+route::post('upload_product',[
+    AdminController::class,'upload_product'
+]) ->middleware(['auth','admin']);
+
+route::get('view_product',[
+    AdminController::class,'view_product'
+]) ->middleware(['auth','admin']);
+route::get('delete_product/{id}',[
+    AdminController::class,'delete_product'
+]) ->middleware(['auth','admin']);
+route::get('update_product/{id}',[
+    AdminController::class,'update_product'
+]) ->middleware(['auth','admin']);
+route::post('edit_product/{id}',[
+    AdminController::class,'edit_product'
+]) ->middleware(['auth','admin']);
+route::get('search_product',[
+    AdminController::class,'search_product'
+]) ->middleware(['auth','admin']);
+
