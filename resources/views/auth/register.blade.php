@@ -17,12 +17,12 @@
         </div>
 
         <div>
-            <x-input-label for="phone" :value="__('phone')" />
+            <x-input-label for="phone" :value="__('Phone Number')" />
             <x-text-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus autocomplete="phone" />
             <x-input-error :messages="$errors->get('phone')" class="mt-2" />
         </div>
         <div>
-            <x-input-label for="address" :value="__('address')" />
+            <x-input-label for="address" :value="__('Address')" />
             <x-text-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required autofocus autocomplete="address" />
             <x-input-error :messages="$errors->get('address')" class="mt-2" />
         </div>
