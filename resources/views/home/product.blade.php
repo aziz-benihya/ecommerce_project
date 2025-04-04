@@ -18,7 +18,7 @@
                 <h6>Price<span>${{$products->price}}</span></h6>
               </div>
               <div style="padding: 10px;">
-                <a href="{{url('product_details', $products->id)}}" class="btn btn-danger">Details</a>
+                <a class="btn btn-danger" href="{{url('product_details', $products->id)}}">Details</a>
               </div>
           
           </div>
