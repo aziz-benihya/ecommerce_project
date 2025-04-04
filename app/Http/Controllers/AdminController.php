@@ -98,10 +98,7 @@ class AdminController extends Controller
        }
 
        $data->save();
-       return redirect()->back();
-        
-
-        
+       return redirect()->back()->with('message', 'Product Added Successfully');
     }
     public function view_product()
     {

@@ -53,6 +53,15 @@
 
          <h1>Add Product</h1>
 
+         <!-- Add this success message section -->
+         @if(session()->has('message'))
+         <div class="alert alert-success" style="margin: 15px;">
+             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+             {{ session()->get('message') }}
+         </div>
+         @endif
+         <!-- End success message section -->
+
             <div class="div_deg">
                 <form action="{{url('upload_product')}}" method="POST"    enctype="multipart/form-data">
                     @csrf
