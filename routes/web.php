@@ -81,3 +81,7 @@ Route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart'])->name('r
 Route::post('/confirm_order', [HomeController::class, 'confirm_order'])->middleware('auth');
 
 Route::get('/view_orders', [AdminController::class, 'view_order'])->middleware(['auth','admin']);
+
+
+Route::get('/on_the_way/{id}', [AdminController::class, 'on_the_way'])->middleware(['auth','admin']);
+Route::get('/delivered/{id}', [AdminController::class, 'delivered'])->middleware(['auth','admin']);

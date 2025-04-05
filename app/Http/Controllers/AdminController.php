@@ -167,5 +167,19 @@ public function edit_product(Request $request, $id)
         
         return view('admin.order',compact('data'));
     }
+    public function on_the_way($id)
+    {
+        $data=Order::find($id);
+        $data->status='on the way';
+        $data->save();
+        return redirect('/view_orders');
+    }
+    public function delivered($id)
+    {
+        $data=Order::find($id);
+        $data->status='delivered';
+        $data->save();
+        return redirect('/view_orders');
+    }
 
 }
