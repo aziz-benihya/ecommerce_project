@@ -60,6 +60,8 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            z-index: 10; /* Keep form above other elements */
+            min-height: 350px; /* Ensure minimum height */
         }
         
         /* Add styling to form elements */
@@ -105,6 +107,25 @@
             text-align: center;
         }
         
+        /* Enhanced success message styling */
+        .success-alert {
+            margin: 15px auto;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            position: relative;
+        }
+        
+        /* Add new style to handle empty cart with order form */
+        .content-area {
+            min-height: 500px; /* Ensure enough space for the order form */
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .order-deg {
@@ -119,6 +140,29 @@
             }
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if we have a form submission success
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderPlaced = localStorage.getItem('orderJustPlaced');
+            
+            if (orderPlaced === 'true') {
+                // Hide order form and show success message
+                document.getElementById('orderForm').style.display = 'none';
+                document.getElementById('orderSuccess').style.display = 'block';
+                // Clear the flag after showing the message
+                localStorage.removeItem('orderJustPlaced');
+            }
+            
+            // Add event listener to the form
+            const form = document.getElementById('orderForm');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    localStorage.setItem('orderJustPlaced', 'true');
+                });
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -127,18 +171,28 @@
     @include('home.header')
   </div>
   
-  <div class="div_deg">
+  <div class="div_deg content-area">
     <h2 class="page-title">Your Shopping Cart</h2>
     
-    <!-- Add success message display -->
+    <!-- Enhanced success message display -->
     @if(session()->has('message'))
-    <div style="margin: 15px; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 4px;">
+    <div class="success-alert">
+        <i class="fa fa-check-circle" aria-hidden="true" style="margin-right: 10px;"></i>
         {{ session()->get('message') }}
     </div>
     @endif
     
-    <!-- Order form - unchanged -->
-    <div class="order-deg">
+    <!-- Order form with hidden success message -->
+    <!-- Success message (hidden by default) -->
+    <div id="orderSuccess" style="position: absolute; top: 100px; left: 0; width: 280px; background: #4CAF50; color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.2); text-align: center; display: none;">
+        <i class="fa fa-check-circle" style="font-size: 48px; margin-bottom: 15px;"></i>
+        <h3>Order Placed Successfully!</h3>
+        <p>Your order has been received and is being processed.</p>
+        <a href="/" class="btn btn-light mt-3">Continue Shopping</a>
+    </div>
+
+    <!-- Order form (shown by default) -->
+    <div id="orderForm" class="order-deg">
         <form action="{{ url('confirm_order') }}" method="POST">
             @csrf  
             <div>
