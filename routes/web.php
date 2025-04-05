@@ -79,3 +79,5 @@ route::get('mycart',[HomeController::class,'mycart'])->middleware(['auth', 'veri
 Route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart'])->name('remove.cart');
 
 Route::post('/confirm_order', [HomeController::class, 'confirm_order'])->middleware('auth');
+
+Route::get('/view_orders', [AdminController::class, 'view_order'])->middleware(['auth','admin']);
