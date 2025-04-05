@@ -136,5 +136,17 @@ public function confirm_order(Request $request)
     
     
 }
-
+public function myorders()
+{
+    if (Auth::id()) {
+        $user = Auth::user();
+        $user = $user->id; // Get the user ID properly
+        $count = Cart::where('user_id', $user)->count(); // Use the ID
+        
+        
+        $orders = Order::where('user_id', $user)->get();
+        
+        return view('home.order', compact('count', 'orders'));
+    }
+}
 }
