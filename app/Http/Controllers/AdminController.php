@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Order;
 
 class AdminController extends Controller
 {
@@ -159,6 +160,12 @@ public function edit_product(Request $request, $id)
         $search = $request->search;
         $product = Product::where('title', 'like', '%' . $search . '%')->paginate(4);
         return view('admin.view_product', compact('product'));
+    }
+    public function view_order()
+    {
+        $data= Order::all();
+        
+        return view('admin.order',compact('data'));
     }
 
 }
