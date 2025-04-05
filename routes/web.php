@@ -75,3 +75,4 @@ route::get('product_details/{id}',[HomeController::class,'product_details']);
 route::get('add_cart/{id}',[HomeController::class,'add_cart'])->middleware(['auth', 'verified']);
 
 route::get('mycart',[HomeController::class,'mycart'])->middleware(['auth', 'verified']);
+Route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart'])->name('remove.cart');

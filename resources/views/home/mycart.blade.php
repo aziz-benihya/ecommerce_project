@@ -65,16 +65,35 @@
             <th>Product Image</th>
             <th>Action</th>
         </tr>
+        <?php 
+        $value = 0;
+        ?>
+
+
         @foreach($cart as $cart)
         <tr>
             <td>{{$cart->product->title}}</td>
             <td>{{$cart->product->price}}</td>
             <td><img src="/products/{{$cart->product->image}}" width="150" ></td>
-            <td><button class="action-btn">Remove</button></td>
+            <td>
+                <a href="{{ url('remove_cart', $cart->id) }}" 
+                   onclick="return confirm('Are you sure you want to remove this product?')"
+                   class="btn btn-danger">
+                  Remove
+                </a>
+              </td>
         </tr>
+        <?php
+        $value = $value + $cart->product->price;
+
+?>
+
         @endforeach
     </table>
   </div>
+<div>
+    <h2 class="page-title">Total Value Of Cart: {{$value}}</h2>
+
 
   @include('home.footer')
   
