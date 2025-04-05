@@ -19,19 +19,47 @@ class HomeController extends Controller
     public function home()
     {
         $product = Product::all();
-        return view('home.index', compact('product'));
+        if (Auth::id()) {
+        $user = Auth::user();
+        $user_id = $user->id;
+        $count= Cart::where('user_id', $user_id)->count();
+
+        }
+        else {
+            $count = '';
+        }
+    
+        return view('home.index', compact('product'), compact('count'));
     }
     
     public function login_home()
     {
         $product = Product::all();
-        return view('home.index', compact('product'));
+        if (Auth::id()) {
+            $user = Auth::user();
+            $user_id = $user->id;
+            $count= Cart::where('user_id', $user_id)->count();
+    
+            }
+            else {
+                $count = '';
+            }
+        return view('home.index', compact('product'), compact('count'));
     }
     
     public function product_details($id)
     {
+        if (Auth::id()) {
+            $user = Auth::user();
+            $user_id = $user->id;
+            $count= Cart::where('user_id', $user_id)->count();
+    
+            }
+            else {
+                $count = '';
+            }
         $data = Product::find($id);
-        return view('home.product_details', compact('data'));
+        return view('home.product_details', compact('data', 'count'));
     }
     
     public function add_cart($id)
