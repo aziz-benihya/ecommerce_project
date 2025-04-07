@@ -91,3 +91,25 @@ Route::get('/view_orders', [AdminController::class, 'view_order'])->middleware([
 
 Route::get('/on_the_way/{id}', [AdminController::class, 'on_the_way'])->middleware(['auth','admin']);
 Route::get('/delivered/{id}', [AdminController::class, 'delivered'])->middleware(['auth','admin']);
+
+
+Route::post('/create-payment-intent', function () {
+    \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
+
+    try {
+        $paymentIntent = \Stripe\PaymentIntent::create([
+            'amount' => 1000, // Montant en cents (10.00 EUR)
+            'currency' => 'eur',
+        ]);
+
+        return response()->json([
+            'clientSecret' => $paymentIntent->client_secret
+        ]);
+    } catch (\Exception $e) {
+        return response()->json(['error' => $e->getMessage()], 500);
+    }
+})->name('payment.intent');
+
+Route::get('/stripe-payment', function () {
+    return view('home.stripe');
+});

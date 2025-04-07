@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Cart;
 use Flasher\Laravel\Facade\Flasher;
 use App\Models\Order;
+use Stripe;
 
 class HomeController extends Controller
 {
@@ -148,5 +149,11 @@ public function myorders()
         
         return view('home.order', compact('count', 'orders'));
     }
+}
+
+public function stripe()
+{
+    return view('home.stripe');
+
 }
 }
