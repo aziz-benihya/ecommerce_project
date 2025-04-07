@@ -338,7 +338,7 @@
                 <input type="text" name="phone" placeholder="Enter your phone number" value="{{Auth::user()->phone ?? ''}}">
 
                 <input type="submit" value="Cash On Delivery" {{ isset($cart) && count($cart) > 0 ? '' : 'disabled' }}>
-                <a id="pay" class="btn" href="{{url('Stripe')}}">Pay Using Card</a>
+                <a id="pay" class="btn" href="{{url('stripe')}}">Pay Using Card</a>
             </div>
         </form>
     </div>

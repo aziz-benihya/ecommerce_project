@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use Flasher\Laravel\Facade\Flasher;
 
+
 Route::get('/', [HomeController ::class,'home']); 
 Route::get('/dashboard', [HomeController ::class,'login_home']) 
 ->middleware(['auth', 'verified'])->name('dashboard');
@@ -112,4 +113,11 @@ Route::post('/create-payment-intent', function () {
 
 Route::get('/stripe-payment', function () {
     return view('home.stripe');
+});
+Route::controller(HomeController::class)->group(function(){
+
+    Route::get('stripe', 'stripe');
+
+    Route::post('stripe', 'stripePost')->name('stripe.post');
+
 });
