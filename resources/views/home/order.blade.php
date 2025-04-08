@@ -6,75 +6,138 @@
     <title>Orders - Ecommerce</title>
     @include('home.css')
     <style>
-        /* Enhanced styling for div_center */
+        /* Modern styling for div_center */
         .div_center {
-            padding: 40px 0;
+            padding: 40px 20px;
             max-width: 1200px;
             margin: 0 auto;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         
         .div_center h2 {
             text-align: center;
-            font-weight: bold;
-            margin-bottom: 30px;
-            color: #333;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
         }
         
         .div_center table {
             width: 100%;
-            border-collapse: collapse;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-collapse: separate;
+            border-spacing: 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.05);
             margin-top: 20px;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
+            background: white;
         }
         
         .div_center th {
-            background: #87ceeb;
-            color: rgb(0, 0, 0);
-            font-weight: 500;
-            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            padding: 18px;
             text-align: center;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .div_center th:first-child {
+            border-top-left-radius: 12px;
+        }
+        
+        .div_center th:last-child {
+            border-top-right-radius: 12px;
         }
         
         .div_center td {
-            padding: 15px;
+            padding: 18px;
             text-align: center;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+            font-weight: 400;
+        }
+        
+        .div_center tr:last-child td {
+            border-bottom: none;
         }
         
         .div_center tr:hover {
-            background-color: #f9f9f9;
+            background-color: #f8f9ff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: all 0.2s ease;
         }
         
         .empty-orders {
             text-align: center;
-            padding: 40px;
-            background: #f9f9f9;
-            border-radius: 8px;
+            padding: 60px 40px;
+            background: white;
+            border-radius: 12px;
             margin-top: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
         
-        .order-status {
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 14px;
+        .empty-orders h3 {
+            color: #6c757d;
             font-weight: 500;
         }
         
+        .order-status {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            min-width: 100px;
+            text-align: center;
+        }
+        
         .status-pending {
-            background: #ffe0b2;
-            color: #e65100;
+            background: #fff3cd;
+            color: #856404;
         }
         
         .status-processing {
-            background: #bbdefb;
-            color: #0d47a1;
+            background: #cce5ff;
+            color: #004085;
         }
         
         .status-delivered {
-            background: #c8e6c9;
-            color: #2e7d32;
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .div_center img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .div_center img:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .div_center {
+                padding: 20px 10px;
+            }
+            
+            .div_center table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .div_center th, 
+            .div_center td {
+                padding: 12px 8px;
+            }
         }
     </style>
 </head>
@@ -106,7 +169,6 @@
 
 
         </div>
-
 
 
     </div>

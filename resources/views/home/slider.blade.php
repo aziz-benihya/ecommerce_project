@@ -9,10 +9,11 @@
                   <div class="detail-box"> 
                     <h1>
                       Welcome To Our <br>
-                      Gift Shop
+                      ZinWear Shop
                     </h1>
                     <p>
-                      Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
+                      Step into a world where style meets confidence. At ZinWear, we bring you trendy, comfortable, and high-quality fashion designed to make you stand out. Whether you're looking for everyday essentials or bold statement pieces, we've got you covered.
+                      Your new favorite outfit is just a click away!
                     </p>
                     <a href="">
                       Contact Us

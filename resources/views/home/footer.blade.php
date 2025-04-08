@@ -23,7 +23,7 @@
               ABOUT US
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+              At ZinWear, we believe fashion is more than just clothing—it’s a statement of individuality and culture. Founded in Agadir, Morocco, our brand blends contemporary style with traditional craftsmanship to create unique, high-quality apparel for men and women. Every piece in our collection is carefully curated to ensure comfort, durability, and timeless elegance. Whether you're looking for casual wear, elegant outfits, or statement pieces, ZinWear brings you fashion that inspires confidence and celebrates Moroccan heritage
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -44,7 +44,7 @@
               NEED HELP
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+              Our dedicated customer support team is here to assist you with any questions about sizing, orders, or styling advice. Reach out to us via email at support@zinwear.com or call +212 456837363. We’re committed to making your ZinbWear experience seamless and enjoyable.
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -54,15 +54,15 @@
             <div class="info_link-box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span> Gb road 123 london Uk </span>
+                <span> Hay Salama Agadir Moroccan  </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>+01 12345678901</span>
+                <span>+212 783635374</span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span> demo@gmail.com</span>
+                <span> ZinWear@gmail.com</span>
               </a>
             </div>
           </div>
@@ -74,7 +74,7 @@
       <div class="container">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Web Tech Knowledge</a>
+          <a href="https://html.design/">Abdelaziz and Hamza </a>
         </p>
       </div>
     </footer>
