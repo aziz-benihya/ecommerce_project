@@ -48,7 +48,7 @@ body {
 }
 
 .heading_container h2 span {
-  color: #f89cab;
+  color: #fd7e14; /* Changed from #f89cab to orange */
 }
 
 .heading_container.heading_center {
@@ -69,7 +69,7 @@ body {
 
 #navbarSupportedContent {
   width: 100%;
-  background-color: skyblue;
+  background-color: #fd7e14; /* Changed from skyblue to orange */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -274,9 +274,9 @@ a:focus {
 .slider_section .detail-box a {
   display: inline-block;
   padding: 10px 40px;
-  background-color: #db4566;
+  background-color: #fd7e14; /* Changed from #db4566 to orange */
   color: #ffffff;
-  border: 1px solid #db4566;
+  border: 1px solid #fd7e14; /* Changed from #db4566 to orange */
   border-radius: 5px;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -286,7 +286,7 @@ a:focus {
 
 .slider_section .detail-box a:hover {
   background-color: transparent;
-  color: #db4566;
+  color: #fd7e14; /* Changed from #db4566 to orange */
 }
 
 .slider_section .carousel_btn-box {
@@ -364,7 +364,7 @@ a:focus {
 }
 
 .shop_section .box .detail-box h6 span {
-  color: #db4f66;
+  color: #fd7e14; /* Changed from #db4f66 to orange */
 }
 
 .shop_section .box .new {
@@ -400,9 +400,9 @@ a:focus {
 .shop_section .btn-box a {
   display: inline-block;
   padding: 10px 40px;
-  background-color: #f16179;
+  background-color: #fd7e14; /* Changed from #f16179 to orange */
   color: #ffffff;
-  border: 1px solid #f16179;
+  border: 1px solid #fd7e14; /* Changed from #f16179 to orange */
   border-radius: 5px;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -410,7 +410,7 @@ a:focus {
 
 .shop_section .btn-box a:hover {
   background-color: transparent;
-  color: #f16179;
+  color: #fd7e14; /* Changed from #f16179 to orange */
 }
 
 .saving_section {
@@ -420,7 +420,7 @@ a:focus {
 
 .saving_section .box {
   padding-top: 45px;
-  background-color: #7fd7eb;
+  background-color: #fd7e14; /* Changed from #7fd7eb to orange */
   color: #ffffff;
   border-radius: 15px;
 }
@@ -465,9 +465,9 @@ a:focus {
 .saving_section .detail-box .btn-box .btn1 {
   display: inline-block;
   padding: 10px 0;
-  background-color: #109dbd;
+  background-color: #000000; /* Changed from #109dbd to black */
   color: #ffffff;
-  border: 1px solid #109dbd;
+  border: 1px solid #000000; /* Changed from #109dbd to black */
   border-radius: 0;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -475,7 +475,7 @@ a:focus {
 
 .saving_section .detail-box .btn-box .btn1:hover {
   background-color: transparent;
-  color: #109dbd;
+  color: #000000; /* Changed from #109dbd to black */
 }
 
 .saving_section .detail-box .btn-box .btn2 {
@@ -509,7 +509,7 @@ a:focus {
 .why_section .box .img-box svg {
   width: 55px;
   height: auto;
-  fill: #320b57;
+  fill: #fd7e14; /* Changed from #320b57 to orange */
 }
 
 .gift_section {
@@ -518,7 +518,7 @@ a:focus {
 }
 
 .gift_section .box {
-  background-color: #6929a5;
+  background-color: #000000; /* Changed from #6929a5 to black */
   border-radius: 15px;
   color: #ffffff;
 }
@@ -579,9 +579,9 @@ a:focus {
 .gift_section .detail-box .btn-box .btn2 {
   display: inline-block;
   padding: 10px 0;
-  background-color: #9242dd;
+  background-color: #fd7e14; /* Changed from #9242dd to orange */
   color: #ffffff;
-  border: 1px solid #9242dd;
+  border: 1px solid #fd7e14; /* Changed from #9242dd to orange */
   border-radius: 0;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -589,7 +589,7 @@ a:focus {
 
 .gift_section .detail-box .btn-box .btn2:hover {
   background-color: transparent;
-  color: #9242dd;
+  color: #fd7e14; /* Changed from #9242dd to orange */
 }
 
 .contact_section {
@@ -650,9 +650,9 @@ a:focus {
 .contact_section button {
   display: inline-block;
   padding: 12px 45px;
-  background-color: #db4f66;
+  background-color: #fd7e14; /* Changed from #db4f66 to orange */
   color: #ffffff;
-  border: 1px solid #db4f66;
+  border: 1px solid #fd7e14; /* Changed from #db4f66 to orange */
   border-radius: 0;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -663,7 +663,7 @@ a:focus {
 
 .contact_section button:hover {
   background-color: transparent;
-  color: #db4f66;
+  color: #fd7e14; /* Changed from #db4f66 to orange */
 }
 
 .contact_section .map_container {
@@ -697,7 +697,7 @@ a:focus {
 
 .client_section .box .client_info .client_name h5 {
   font-weight: 600;
-  color: #db4f66;
+  color: #fd7e14; /* Changed from #db4f66 to orange */
 }
 
 .client_section .box .client_info .client_name h6 {
@@ -719,7 +719,7 @@ a:focus {
 .client_section .carousel-control-next {
   width: 45px;
   height: 125px;
-  background-color: #db4f66;
+  background-color: #fd7e14; /* Changed from #db4f66 to orange */
   opacity: 1;
   font-size: 28px;
   font-weight: bold;
@@ -739,7 +739,7 @@ a:focus {
 /* info section */
 .info_section {
   position: relative;
-  background-color: #2d2d2d;
+  background-color: #000000; /* Changed from #2d2d2d to black */
   color: #ffffff;
   margin: 0 45px 45px;
 }
@@ -781,7 +781,7 @@ a:focus {
   outline: none;
   border: none;
   color: #ffffff;
-  background: #f89cab;
+  background: #fd7e14; /* Changed from #f89cab to orange */
   margin-top: 15px;
   text-transform: uppercase;
 }
@@ -833,7 +833,50 @@ a:focus {
   color: #ffffff;
 }
 
-/* end info section */
+/* Product details and add to cart buttons */
+.product-detail-btn,
+.btn-product-details {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.product-detail-btn:hover,
+.btn-product-details:hover {
+  background-color: transparent;
+  color: #000000;
+}
+
+.add-to-cart-btn,
+.btn-add-to-cart {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #fd7e14;
+  color: #ffffff;
+  border: 1px solid #fd7e14;
+  border-radius: 5px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.add-to-cart-btn:hover,
+.btn-add-to-cart:hover {
+  background-color: transparent;
+  color: #fd7e14;
+}
+
 /* footer section*/
 .footer_section {
   margin-top: 45px;
