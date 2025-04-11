@@ -16,7 +16,7 @@
     {
        color: white; 
     }
-    label
+    label 
     {
         display: inline-block;
         width: 200px;

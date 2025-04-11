@@ -6,139 +6,177 @@
     <title>Orders - Ecommerce</title>
     @include('home.css')
     <style>
-        /* Modern styling for div_center */
-        .div_center {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        
-        .div_center h2 {
-            text-align: center;
-            font-weight: 700;
-            margin-bottom: 40px;
-            color: #2c3e50;
-            font-size: 2.2rem;
-            letter-spacing: -0.5px;
-        }
-        
-        .div_center table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.05);
-            margin-top: 20px;
-            border-radius: 12px;
-            overflow: hidden;
-            background: white;
-        }
-        
-        .div_center th {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-weight: 600;
-            padding: 18px;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
-        }
-        
-        .div_center th:first-child {
-            border-top-left-radius: 12px;
-        }
-        
-        .div_center th:last-child {
-            border-top-right-radius: 12px;
-        }
-        
-        .div_center td {
-            padding: 18px;
-            text-align: center;
-            border-bottom: 1px solid #f0f0f0;
-            color: #555;
-            font-weight: 400;
-        }
-        
-        .div_center tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .div_center tr:hover {
-            background-color: #f8f9ff;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            transition: all 0.2s ease;
-        }
-        
-        .empty-orders {
-            text-align: center;
-            padding: 60px 40px;
-            background: white;
-            border-radius: 12px;
-            margin-top: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-        
-        .empty-orders h3 {
-            color: #6c757d;
-            font-weight: 500;
-        }
-        
-        .order-status {
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-block;
-            min-width: 100px;
-            text-align: center;
-        }
-        
-        .status-pending {
-            background: #fff3cd;
-            color: #856404;
-        }
-        
-        .status-processing {
-            background: #cce5ff;
-            color: #004085;
-        }
-        
-        .status-delivered {
-            background: #d4edda;
-            color: #155724;
-        }
-        
-        .div_center img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .div_center img:hover {
-            transform: scale(1.05);
-        }
-        
-        @media (max-width: 768px) {
-            .div_center {
-                padding: 20px 10px;
-            }
-            
-            .div_center table {
-                display: block;
-                overflow-x: auto;
-            }
-            
-            .div_center th, 
-            .div_center td {
-                padding: 12px 8px;
-            }
-        }
+       /* Style moderne pour la page de commandes */
+.div_center {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.div_center h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1e293b;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.div_center h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border-radius: 2px;
+}
+
+.div_center table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.div_center th {
+    background-color: #f1f5f9;
+    color: #64748b;
+    font-weight: 600;
+    padding: 16px 24px;
+    text-align: left;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.div_center td {
+    padding: 20px 24px;
+    color: #334155;
+    font-weight: 500;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.div_center tr:last-child td {
+    border-bottom: none;
+}
+
+.div_center tr:hover {
+    background-color: #f8fafc;
+}
+
+.order-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+}
+
+.status-pending {
+    background-color: #ffedd5;
+    color: #9a3412;
+}
+
+.status-processing {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-delivered {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.div_center img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease;
+}
+
+.div_center img:hover {
+    transform: scale(1.05);
+}
+
+.empty-orders {
+    text-align: center;
+    padding: 60px 40px;
+    background: white;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.empty-orders h3 {
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.empty-orders .btn {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.empty-orders .btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .div_center {
+        padding: 20px 15px;
+    }
+    
+    .div_center table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .div_center th, 
+    .div_center td {
+        padding: 12px 15px;
+    }
+    
+    .div_center h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animation pour les lignes du tableau */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.div_center tr {
+    animation: fadeIn 0.3s ease forwards;
+    animation-delay: calc(var(--order) * 0.05s);
+}
     </style>
 </head>
 <body>
