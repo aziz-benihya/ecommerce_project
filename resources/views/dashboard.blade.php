@@ -222,7 +222,7 @@
     <!-- Sidebar -->
     <aside class="sidebar">
         <div class="brand">
-            <h1>DARKADMIN</h1>
+            <h1>Interface Admin</h1>
             <p>ZinWear | MEXICO</p>
         </div>
         
